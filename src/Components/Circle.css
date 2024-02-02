@@ -1,0 +1,67 @@
+.main-circle-div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 83.2rem;
+    width: 100%;
+    align-self: center;
+    align-content: flex-start;
+    margin-top: 4rem;
+}
+
+.scrolling-div {
+    display: block;
+    background-color: black;
+    padding: 1.6rem;
+    height: 180rem;
+    width: 100%;
+    border-radius: 50%;
+    align-self: center;
+    background-image: url(./Ethereum-Logo-PNG-HD-Image.png);
+    background-position: center;
+    background-size: 40rem 80rem;
+    background-repeat: no-repeat;
+}
+
+.update {
+    background-image: none;
+}
+
+.display-none {
+    display: none;
+
+}
+
+.display-content {
+    display: flex;
+    color: white;
+    align-self: center;
+    margin-top: 20rem;
+    background-color: black;
+    width: 100%;
+}
+
+.when-on-mobile-screen {
+    display: none;
+    color: white;
+    justify-content: center;
+    height: 83.2rem;
+    width: 100%;
+    align-self: center;
+    align-content: flex-start;
+    background-color: black;
+}
+
+@media(max-width :1188px) {
+    .scrolling-div {
+        display: none;
+    }
+
+    .update {
+        display: none;
+    }
+
+    .when-on-mobile-screen {
+        display: flex;
+    }
+}

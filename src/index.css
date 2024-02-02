@@ -1,0 +1,51 @@
+.html {
+  font-size: 62.5% !important;
+}
+
+.header {
+  background-color: transparent;
+  position: fixed;
+}
+
+body{
+  position: relative;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  margin: 0;
+  padding-inline-start: 0;
+  display: grid;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  background-image: url(./Components/beams-home@95.jpg);
+  background-size: 100%;
+  background-position: center;
+  background-repeat: 3;
+}
+
+@media(max-width :1188px) {
+  html {
+    font-size: 85% !important;
+  }
+}
+
+@media(max-width:675px) {
+  html {
+    font-size: 80% !important;
+  }
+}
+
+@media(max-width:550px) {
+  html {
+    font-size: 75% !important;
+  }
+}
+
+
+
