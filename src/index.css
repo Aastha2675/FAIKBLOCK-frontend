@@ -22,7 +22,6 @@ body{
   display: grid;
   width: 100%;
   height: 100%;
-  background-color: transparent;
 }
 
 @media(992px <= width <= 1200px ) {

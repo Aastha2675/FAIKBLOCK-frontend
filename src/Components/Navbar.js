@@ -14,7 +14,9 @@ const Nav = () => {
       <nav>
         <div className="main-nav">
           <div className="nav-container">
-            <div className="website-name"></div>
+            <div className="website-name">
+              <div className="website-logo"></div>
+            </div>
             <div
               className={othervalues ? "other othernew" : "other"}
               id="list-example"

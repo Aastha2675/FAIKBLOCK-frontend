@@ -1,3 +1,5 @@
+
+
 .scanner-container{
     display: flex;
     justify-content: center;
@@ -9,6 +11,9 @@
     border: solid 0.1rem silver;
     box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
     background-color:transparent;
+    position: relative;
+    margin-left: 10rem;
+    background: linear-gradient(to right, #ffffff, rgb(242, 222, 242), rgb(222, 233, 253), #f8f9fe, #dee2fd, #ffffff);
 }
 
 #reader{
@@ -73,4 +78,10 @@
     font-weight: 600;
     margin-top: 2rem;
     margin-bottom: 4rem;
+}
+
+@media (100px <= width <= 600px) {
+    .scanner-container{
+        margin-left: 20rem;
+    }
 }
