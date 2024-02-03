@@ -17,7 +17,7 @@
     justify-self: center;
     width: 30rem;
     height: 32rem;
-    margin: 3.5rem 1rem 3rem 6rem;
+    margin-top: 3.5rem;
     border: white 0.1rem solid;
     background-color:black;
 }
@@ -45,53 +45,74 @@
     justify-self: center;
     width: 30rem;
     height: 32rem;
-    margin: 3.5rem 6rem 3rem 1rem;
+    margin-top: 3.5rem;
     border-radius: 2rem;
     background-image: url(./fake.vs.real.jpg);
 }
 
-@media (max-width:675px) {
+ @media ( 992px <= width <= 1200px){
     .aboutus-container{
-        width:46rem;
-        height: 36rem;
+        height: 50rem;
     }
-    
-    .column1, .column2{
-        width: 20rem;
-        height: 30rem;
+    .column1 , .column2{
+        width: 40rem;
+        height: 42rem;
     }
-    
-    .column1 h1{
-        font-size: 1.8rem;
-    }
-
     .column1 p{
-        margin: 1rem;
-        font-size: 1.1rem;
+        font-size: 1.6rem;
     }
-}
+ }
 
-@media (max-width:550px) {
+ @media (768px <= width <= 992px) {
+    .column1 ,.column2{
+        width: 50rem;
+        height: 52rem;
+    }
+
+    .aboutus-container{
+        height: 60rem;
+    }
+
+    .column1 p {
+        font-size: 2.2rem;
+    }
+ }
+
+ @media (600px <= width <= 768px) {
+    .column1 , .column2{
+        width: 60rem;
+        height: 62rem;
+    }
+
+    .aboutus-container{
+        height: 70rem;
+    }
+
+    .column1 p {
+        font-size: 2.5rem;
+    }
+ }
+
+ @media ( 100px <= width < 330px) {
     .aboutus-container{
         display: flex;
-        justify-content: center;
-        width: 34rem;
-        height: 40rem;
-        border-radius: 2rem;
-        padding: 0;
-        margin: 0;
-    }
-
-    .column1{
-       justify-self: center;
-       width: 30rem;
-       height: 36rem;
-       padding: 0%;
-       margin: 2rem 2rem 2rem 2rem;
+        flex-direction: column;
+        height: 50rem;
+        width: 100%;
+        align-content: center;
+        flex-wrap: wrap;
     }
 
     .column2{
         display: none;
     }
-}
+    .column1{
+        margin-top: 0rem;
+        height: 45rem;
+        width: 60rem;
+    }
+    .column1 p {
+        font-size: 2rem ;
+    }
 
+ }

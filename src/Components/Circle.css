@@ -2,18 +2,18 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    height: 83.2rem;
+    height: 83.2rem; /*Adjust the height according to the component height*/
     width: 100%;
     align-self: center;
     align-content: flex-start;
-    margin-top: 4rem;
+    background: linear-gradient(to right, #ffffff, rgb(242, 222, 242), rgb(222, 233, 253), #f8f9fe, #dee2fd, #ffffff);
 }
 
 .scrolling-div {
     display: block;
     background-color: black;
-    padding: 1.6rem;
-    height: 180rem;
+    /* padding: 1.6rem; */
+    height: 180rem; /*Adjust the height according to the component height*/
     width: 100%;
     border-radius: 50%;
     align-self: center;
@@ -23,13 +23,16 @@
     background-repeat: no-repeat;
 }
 
-.update {
+.main-circle-div-update{
+    background: black;
+}
+
+.scrolling-div-update {
     background-image: none;
 }
 
 .display-none {
     display: none;
-
 }
 
 .display-content {
@@ -52,7 +55,17 @@
     background-color: black;
 }
 
-@media(max-width :1188px) {
+@media (768px <= width <= 991px){
+    .main-circle-div{
+        width: 100%;
+    }
+
+    .main-circle-div-update{
+        width: 100%;
+    }
+}
+
+@media (width <= 745px ){
     .scrolling-div {
         display: none;
     }

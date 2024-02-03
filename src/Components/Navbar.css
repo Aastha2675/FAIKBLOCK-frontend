@@ -21,7 +21,7 @@ nav {
     width: 100%;
     height: 4rem;
     display: grid;
-    grid-template-columns: 3rem 20rem 3fr 5rem;
+    grid-template-columns: 3rem 4fr 8fr 3rem;
     align-content: center;
 }
 
@@ -121,13 +121,49 @@ a {
     display: none;
 }
 
-@media(max-width:675px) {
+
+@media(900px <= width <= 992px){
+   .other{
+    grid-column: 3/5;
+   }
+}
+
+@media(768px <= width <= 899px  )  {
+
+    .nav-container{
+        grid-template-columns: 0.2rem 0.5fr 1fr 0.5rem;
+    }
+
+    .website-name{
+        grid-column: 1/2;
+        width: 12rem;
+        margin-top: 0.5rem;
+        margin-left: 0.3rem;
+    } 
+    
+    .other{
+        grid-column: 3/5;
+    }
+}
+
+@media(600px <= width <= 768px) {
     .hambuger {
         display: flex;
         justify-content: center;
         grid-column: 5/6;
         grid-row: 1/3;
         z-index: 10;
+    }
+
+    .website-name{
+        grid-column: 1/2;
+        background-image:url(./logo.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 8rem;
+        width: 8rem;
+        margin-top: -4rem;
+        margin-left: 2rem;
     }
 
     .fcmenu{
@@ -140,7 +176,7 @@ a {
         background-color: rgb(0, 0, 0);
         grid-template-rows: 4rem repeat(2,2fr) ;
         display: block;
-        width: 100%;
+        width: 75%;
         height: 15%;
         margin: 0 auto;
         padding-top: 1rem;
@@ -227,3 +263,122 @@ a {
         background:transparent;
     }
 }
+
+@media(100px <= width < 600px){
+
+    nav {
+    display: flex;
+    justify-content: center;
+    justify-self: center;
+    }
+
+    .hambuger {
+        display: flex;
+        justify-content: center;
+        grid-column: 4/5;
+        grid-row: 1/3;
+        z-index: 10;
+    }
+
+    .website-name{
+        grid-column: 1/2;
+        background-image:url(./logo.png);
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: 8rem;
+        width: 8rem;
+        margin-top: -3rem;
+        margin-left: 2rem;
+    }
+
+    .fcmenu {
+        width: 1.8rem;
+        height: 1.8rem;
+        background: linear-gradient(to right, #5680e9, #5AB9EA);
+    }
+
+    .main-nav {
+        background-color: rgb(0, 0, 0);
+        grid-template-rows: 4rem repeat(2, 2fr);
+        display: block;
+        width: 100%;
+        height: 15%;
+        margin: 1rem auto;
+        padding-top: 1rem;
+        padding-left: 0%;
+        padding-bottom: 0%;
+        padding-right: 0%;
+        border-radius: 2rem;
+        border-width: 0.1rem;
+        z-index: 2;
+        position: fixed;
+        transform: translateX(0%);
+    }
+
+    .nav-container {
+        width: 100%;
+        height: 4rem;
+        display: grid;
+        grid-template-columns: 0.2rem 1fr 4fr 1fr 0.5rem;
+        align-content: center;
+        grid-template-rows: 1rem 2rem;
+        grid-row: 1/2;
+    }
+
+    .other {
+        display: flex;
+        position: fixed;
+        width: 100%;
+        height: 22rem;
+        background-color: black;
+        justify-content: center;
+        border-radius: 2rem;
+        clip-path: circle(12px at 94% -10%);
+        -webkit-clip-path: circle(12px at 94% -10%);
+        transition: all 1s linear;
+        pointer-events: none;
+    }
+
+    .othernew {
+        clip-path: circle(1200px at 94% -10%);
+        -webkit-clip-path: circle(1200px at 94% -10%);
+        pointer-events: all;
+    }
+
+    .other ul {
+        height: 22rem;
+        justify-content: space-around;
+        align-items: center;
+        list-style-type: none;
+        flex-direction: column;
+    }
+
+    .other li {
+        font-family: sans-serif;
+        font-size: 2rem;
+    }
+
+    .home,
+    .aboutus,
+    .statistic {
+        color: white;
+        font-size: 2rem;
+    }
+
+    .login {
+        color: white;
+        height: .5rem;
+        font-size: 2rem;
+        width: 10rem;
+        border: none;
+        background-color: transparent;
+    }
+
+    .joinus {
+        color: white;
+        height: 1.5rem;
+        font-size: 1.2rem;
+        width: 10rem;
+        background: transparent;
+    }
+} 

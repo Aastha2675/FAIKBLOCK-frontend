@@ -34,11 +34,17 @@ const ScrollingDiv = () => {
   }, []);
 
   return (
-    <div className="main-circle-div">
+    <div
+      className={
+        dimensions.borderradius === "0%"
+          ? "main-circle-div main-circle-div-update"
+          : "main-circle-div"
+      }
+    >
       <div
         className={
           dimensions.borderradius === "0%"
-            ? "scrolling-div update"
+            ? "scrolling-div scrolling-div-update"
             : "scrolling-div"
         }
         style={{

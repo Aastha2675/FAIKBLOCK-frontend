@@ -22,28 +22,49 @@ body{
   display: grid;
   width: 100%;
   height: 100%;
-  justify-content: center;
-  background-image: url(./Components/beams-home@95.jpg);
-  background-size: 100%;
-  background-position: center;
-  background-repeat: 3;
+  background-color: transparent;
 }
 
-@media(max-width :1188px) {
+@media(992px <= width <= 1200px ) {
   html {
-    font-size: 85% !important;
+    font-size: 65% !important;
   }
 }
 
-@media(max-width:675px) {
+@media(768px <= width <= 991px) {
   html {
-    font-size: 80% !important;
+    font-size: 55% !important;
+  }
+
+  #root{
+    width: 100% !important;
+  }
+  .main-circle-div{
+    width: 100%;
   }
 }
 
-@media(max-width:550px) {
+@media( 600px <= width <= 768px) {
   html {
-    font-size: 75% !important;
+    font-size: 45% !important;
+  }
+  #root {
+    width: 100% !important;
+  }
+  .main-circle-div{
+    width: 100%;
+  }
+}
+
+@media(600 > width){
+  html{
+    font-size: 35%;
+  }
+  #root {
+    width: 100% !important;
+  }
+  .main-circle-div{
+    width: 100%;
   }
 }
 

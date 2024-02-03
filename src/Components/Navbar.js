@@ -35,7 +35,7 @@ const Nav = () => {
                 <li>
                   <a href="#list-item-2" className="aboutus">
                     {" "}
-                    About Us{" "}
+                    AboutUs{" "}
                   </a>
                 </li>
                 <li>

@@ -48,7 +48,7 @@ const MainText = () => {
         </h1>
         <div className="description-container">
           <p className="center-content">
-            Website Name is a platform which helps you distinguish between
+            Faikblock is a platform which helps you distinguish between
             authentic and counterfeit products. By harnessing blockchain
             technology, we provide a reliable and efficient solution for
             identifying genuine products and spotting fakes with confidence.
