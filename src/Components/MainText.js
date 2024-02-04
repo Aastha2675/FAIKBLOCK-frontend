@@ -21,7 +21,7 @@ const OnHoverScan = () => {
 const MainText = () => {
   const navigate = useNavigate();
   const gotoScanpage = () => {
-    navigate("/");
+    navigate("./Scanpage");
   };
 
   const [showScan, setShowScan] = useState(false);

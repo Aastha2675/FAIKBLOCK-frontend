@@ -4,6 +4,7 @@ import Navbarpage from "./Components/Navbarpage";
 import Homepage from "./Components/Homepage";
 import LoginSignUp from "./Components/LoginSignUp";
 import JoinUs from "./Components/Joinus";
+import Scanpage from "./Components/Scanpage";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route exact path="/" element={<Navbarpage />}>
             <Route index element={<Homepage />} />
           </Route>
+          <Route exact path="/Scanpage" element={<Scanpage />} />
           <Route exact path="/LoginSignUp" element={<LoginSignUp />} />
           <Route exact path="/JoinUs" element={<JoinUs />} />
         </Routes>
