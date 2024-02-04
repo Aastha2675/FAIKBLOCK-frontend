@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from "react";
 import "./Circle.css";
+// import Content from "./vertical";
+// import Index from "./horizontal-scroll";
+import Content from "./vertical";
 
 const ScrollingDiv = () => {
   const [dimensions, setDimensions] = useState({
@@ -60,7 +63,8 @@ const ScrollingDiv = () => {
               : "display-none"
           }
         >
-          Your Component is goes here as a component
+          <Content />
+          {/* <Index /> */}
         </div>
       </div>
 

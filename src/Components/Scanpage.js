@@ -2,7 +2,6 @@ import { Html5QrcodeScanner } from "html5-qrcode";
 import { useEffect } from "react";
 import { useState } from "react";
 import "./Scanpage.css";
-import { Link } from "react-router-dom";
 
 const Scanpage = () => {
   const [ScanResult, setScanResult] = useState(null);
@@ -32,8 +31,8 @@ const Scanpage = () => {
     <>
       <div className="scanner-container">
         {ScanResult ? (
-          <div id="reader">
-            <Link to={ScanResult}>{ScanResult}</Link>
+          <div>
+            {ScanResult}
             {/* data is displayed from backend in this div */}
           </div>
         ) : (

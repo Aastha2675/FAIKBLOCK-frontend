@@ -20,8 +20,8 @@ const OnHoverScan = () => {
 
 const MainText = () => {
   const navigate = useNavigate();
-  const GoToScanpage = () => {
-    navigate("/Scanpage");
+  const gotoScanpage = () => {
+    navigate("/");
   };
 
   const [showScan, setShowScan] = useState(false);
@@ -40,7 +40,7 @@ const MainText = () => {
         <h1 className="center-text">
           <span>
             <span className="website-name-img">huwhjhwhg</span>
-            <br />
+            <div className="space"></div>
             Your Journey to Find
             <br />
             Genuine Products
@@ -59,7 +59,7 @@ const MainText = () => {
             className="scan-button"
             onMouseOver={handleClick1}
             onMouseLeave={handleClick2}
-            onClick={GoToScanpage}
+            onClick={gotoScanpage} /*link to be added here of scanner.html*/
           >
             {showScan ? <OnHoverScan /> : "SCAN HERE"}
           </button>

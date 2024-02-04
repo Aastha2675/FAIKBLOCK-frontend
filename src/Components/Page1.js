@@ -27,22 +27,24 @@ const Page1 = () => {
 
   return (
     <>
-      <div className="page1-container">
-        <ReactConfetti
-          width={windowdimenstions.width}
-          height={windowdimenstions.height}
-          tweenDuration={1000}
-        />
-        <div className="tick-icon"></div>
-        <h3>Product is Original</h3>
-        <div className="details">
-          <p>Product Name : product name </p>
-          <p>Manufacturing Company : Company name</p>
-          <p>Date of Expiry : Date</p>
-          <button className="payment-btn"> Payment</button>
-          <p className="go-back" onClick={gotohome}>
-            Go back!
-          </p>
+      <div className="scanner-container">
+        <div className="page1-container">
+          <ReactConfetti
+            width={windowdimenstions.width}
+            height={windowdimenstions.height}
+            tweenDuration={1000}
+          />
+          <div className="tick-icon"></div>
+          <h3>Product is Original</h3>
+          <div className="details">
+            <p>Product Name : product name </p>
+            <p>Manufacturing Company : Company name</p>
+            <p>Date of Expiry : Date</p>
+            <button className="payment-btn"> Payment</button>
+            <p className="go-back" onClick={gotohome}>
+              Go back!
+            </p>
+          </div>
         </div>
       </div>
     </>

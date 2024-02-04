@@ -11,20 +11,22 @@ const Page3 = () => {
 
   return (
     <>
-      <div className="page3-container">
-        <div className="div-for-img"></div>
-        <h3>
-          <TiWarning className="warning-icon" />
-          This Product Is Fake
-        </h3>
-        <p>Please be cautious</p>
-        <button className="report-btn">
-          <FaRegThumbsDown className="icon-thumbdown" />
-          Report
-        </button>
-        <p className="go-back" onClick={gotohome}>
-          Go back!
-        </p>
+      <div className="scanner-container">
+        <div className="page3-container">
+          <div className="div-for-img"></div>
+          <h3>
+            <TiWarning className="warning-icon" />
+            This Product Is Fake
+          </h3>
+          <p>Please be cautious</p>
+          <button className="report-btn">
+            <FaRegThumbsDown className="icon-thumbdown" />
+            Report
+          </button>
+          <p className="go-back" onClick={gotohome}>
+            Go back!
+          </p>
+        </div>
       </div>
     </>
   );
