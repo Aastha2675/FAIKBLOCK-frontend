@@ -59,7 +59,7 @@ const MainText = () => {
             className="scan-button"
             onMouseOver={handleClick1}
             onMouseLeave={handleClick2}
-            onClick={gotoScanpage} /*link to be added here of scanner.html*/
+            onClick={gotoScanpage}
           >
             {showScan ? <OnHoverScan /> : "SCAN HERE"}
           </button>

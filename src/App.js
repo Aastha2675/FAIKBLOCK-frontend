@@ -6,7 +6,11 @@ import LoginSignUp from "./Components/LoginSignUp";
 import JoinUs from "./Components/Joinus";
 import Scanpage from "./Components/Scanpage";
 
-function App() {
+function App(props) {
+  const onNewScanResult = (decodedText, decodedResult) => {
+    // handle decoded results here
+  };
+
   return (
     <>
       <BrowserRouter>
@@ -14,7 +18,18 @@ function App() {
           <Route exact path="/" element={<Navbarpage />}>
             <Route index element={<Homepage />} />
           </Route>
-          <Route exact path="/Scanpage" element={<Scanpage />} />
+          <Route
+            exact
+            path="/Scanpage"
+            element={
+              <Scanpage
+                fps={10}
+                qrbox={250}
+                disableFlip={false}
+                qrCodeSuccessCallback={onNewScanResult}
+              />
+            }
+          />
           <Route exact path="/LoginSignUp" element={<LoginSignUp />} />
           <Route exact path="/JoinUs" element={<JoinUs />} />
         </Routes>
