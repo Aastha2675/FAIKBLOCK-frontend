@@ -58,26 +58,33 @@
 }
 
  .card h1 {
-  color: black;
+  color:black;
   margin:1.0rem;
   padding: 2.0rem;
-  font-size: 5.0rem;
+  font-size: 4.5rem;
   margin-top: 1.0rem;
+  letter-spacing: 0.08em;
+  font-family: 'Righteous', sans-serif;
+
 }
 
- .card h3 {
 
+
+ .card h3 {
   padding: 2.0rem;
   padding-right: 2.0rem;
   font-size: 1.5rem;
   color:black;
+  text-transform: uppercase;
+  font-family: 'Playfair Display', serif;
 }
 
 .card p {
-  font-size: 1.0rem;
+  font-size: 1.3rem;
   padding: 2em;
   margin: 0;
   color: black;
+  font-family: "sans serif";
 }
 
 
@@ -149,6 +156,7 @@
 }
  .FoodText{
   width:50%;
+  
   
 
 }

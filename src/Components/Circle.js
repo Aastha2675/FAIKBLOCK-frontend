@@ -69,7 +69,7 @@ const ScrollingDiv = () => {
       </div>
 
       <div className="when-on-mobile-screen">
-        Your Component is goes here as a component
+        <Content />
       </div>
     </div>
   );
