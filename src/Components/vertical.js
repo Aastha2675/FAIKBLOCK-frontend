@@ -17,7 +17,6 @@ const Card = ({
       <div className={`card-text ${textClassName}`}>
         <h1>{title}</h1>
         <h3>{textContent}</h3>
-
         <p>{textDescription}</p>
       </div>
     </div>
