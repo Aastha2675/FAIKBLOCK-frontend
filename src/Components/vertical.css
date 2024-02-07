@@ -22,13 +22,13 @@
 }
 
 .card {
-  
 	position: sticky;
 	top: 0;
 	padding-top: var(--card-top-offset);
 	transform-origin: 50% 0%;
 	will-change: transform;
 }
+
 .card-content::after{
   /* content: " Show Debug"; */
   margin-left: 0rem;
@@ -151,18 +151,15 @@
   padding-left:00rem;
   right: 0; 
 }
+
  .FoodText{
   width:50%;
-  
-  
-
 }
+
 .card-text.FoodText {
-  position: absolute;
-right: 0;
- 
+position: absolute;
+right: 0; 
 }
-
 
 .FoodImage {
       position: absolute;
