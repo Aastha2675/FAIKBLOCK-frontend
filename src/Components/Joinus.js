@@ -1,6 +1,15 @@
 import { useState } from "react";
 import { IoCloseCircle } from "react-icons/io5";
 import "./LoginSignUpJoinUs.css";
+import { useWriteContract } from 'wagmi';
+import abi from "../Metadata/abi.json";
+import contractAddress from "../Metadata/ContractAddress";
+import { useAccount } from "wagmi";
+import { sepolia } from 'wagmi/chains';
+import { parseEther } from 'viem';
+/* global BigInt */
+
+
 
 const JoinUs = ({ onClose }) => {
   const [Productname, setProductname] = useState("");
@@ -8,32 +17,72 @@ const JoinUs = ({ onClose }) => {
   const [Companyname, setCompanyname] = useState("");
   const [WalletAddress, setWalletAddress] = useState("");
   const [password, setPassword] = useState("");
+  const [Productcost, setProductcost] = useState("");
   const [allEntries, setAllEntries] = useState([]);
-
-  const onSubmitForm = (e) => {
-    e.preventDefault();
+  
+  const { writeContract } = useWriteContract()
+  const account = useAccount()
+  
+  
+  
+  const interact = (productname,productcost,date,passwordd,companyname ) => {
+  
+    
+    const myBigIntCost = BigInt(productcost);  
+    const myNumber = Number(myBigIntCost);
+    const cost = myNumber*(10**18);
+    console.log(cost);
 
     if (!Companyname || !WalletAddress || !password) {
       alert("Please fill in all details.");
       return;
     }
 
+    
+    return (writeContract({
+      abi,
+      address: contractAddress,
+      functionName: 'register',
+      args: [
+        productname,//Productname,
+        companyname,// Companyname,
+        account.address,
+        date,// Date,
+        passwordd,// password,
+        cost// Productcost
+      ],
+      account:account.address,
+      chainId:sepolia.id,
+      value: parseEther('0.01'),
+    }))
+  
+  
+  
+  }
+  const onSubmitForm = (e) => {
+    e.preventDefault();
+
     const newEntry = {
       Productname: Productname,
       Date: Date,
       Companyname: Companyname,
+      Productcost: Productcost,
       WalletAddress: WalletAddress,
       password: password,
     };
 
     setAllEntries([...allEntries, newEntry]);
+  
+    setTimeout( () => {
 
-    console.log(newEntry);
-    setProductname("");
-    setDate("");
-    setCompanyname("");
-    setWalletAddress("");
-    setPassword("");
+      setProductname("");
+      setDate("");
+      setCompanyname("");
+      setProductcost("");
+      setWalletAddress("");
+      setPassword("");
+    
+    },3000)
   };
 
   return (
@@ -46,6 +95,7 @@ const JoinUs = ({ onClose }) => {
         </div>
         <IoCloseCircle className="icon-close-joinus" onClick={onClose} />
         <h1> Join Us </h1>
+        <h4>Come Join the Top 1% of the Brands</h4>
         <input
           type="text"
           placeholder="Enter Product Name"
@@ -58,7 +108,7 @@ const JoinUs = ({ onClose }) => {
         />
 
         <input
-          type="integer"
+          type="text"
           placeholder="Enter Expiry Date "
           name="Date"
           id="Date"
@@ -78,6 +128,18 @@ const JoinUs = ({ onClose }) => {
           onChange={(e) => setCompanyname(e.target.value)}
           required={true}
         />
+
+        <input
+          type="number"
+          placeholder="Enter Product cost"
+          name="Productcost"
+          id="Productcost"
+          autoComplete="off"
+          value={Productcost}
+          onChange={(e) => setProductcost(e.target.value)}
+          required={true}
+        />
+
 
         <input
           type="text"
@@ -101,7 +163,7 @@ const JoinUs = ({ onClose }) => {
           required={true}
         />
 
-        <button className="btn"> Join Us</button>
+        <button className="btn" onClick={ () => interact(Productname,Productcost,Date,password,Companyname)}> Join Us</button>
       </form>
     </>
   );

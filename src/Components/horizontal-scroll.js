@@ -63,14 +63,14 @@ const Index = () => {
           alt="chanel"
           className="image"
         />
-        <img
+        {/* <img
           src={
             process.env.PUBLIC_URL +
             "https://res.cloudinary.com/drf1yrgws/image/upload/v1707027647/Horizontal/cipla.png"
           }
           alt="cipla"
           className="image"
-        />
+        /> */}
         <img
           src={
             process.env.PUBLIC_URL +

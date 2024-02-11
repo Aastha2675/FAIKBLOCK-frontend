@@ -34,13 +34,13 @@ const TwoCurveGraphs = () => {
       },
       options: {
         scales: {
-          yAxes: [
-            {
-              ticks: {
-                beginAtZero: true,
-              },
+          y: {
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: "Value",
             },
-          ],
+          },
         },
       },
     });
@@ -73,13 +73,13 @@ const TwoCurveGraphs = () => {
       },
       options: {
         scales: {
-          yAxes: [
-            {
-              ticks: {
-                beginAtZero: true,
-              },
+          y: {
+            display: true,
+            scaleLabel: {
+              display: true,
+              labelString: "Value",
             },
-          ],
+          },
         },
       },
     });

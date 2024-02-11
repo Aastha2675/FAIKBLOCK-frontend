@@ -4,9 +4,9 @@ import { FaLocationDot } from "react-icons/fa6";
 const Footer = () => {
   return (
     <>
-      <footer class="footer">
-        <div class="footer__addr">
-          <div class="footer__logo"></div>
+      <footer className="footer">
+        <div className="footer__addr">
+          <div className="footer__logo"></div>
 
           <h2>
             <b>
@@ -19,19 +19,19 @@ const Footer = () => {
           <address>
             VJTI, Matunga-Mumbai 400019
             <br />
-            <a class="footer__btn" href="mailto:example@gmail.com">
+            <a className="footer__btn" href="mailto:example@gmail.com">
               Email Us
             </a>
           </address>
         </div>
 
-        <ul class="footer__nav">
-          <li class="nav__item">
-            <h2 class="nav__title">
+        <ul className="footer__nav">
+          <li className="nav__item">
+            <h2 className="nav__title">
               <b>Social</b>
             </h2>
 
-            <ul class="nav__ul">
+            <ul className="nav__ul">
               <li>
                 <a href="/">LinkdeIn</a>
               </li>
@@ -52,12 +52,12 @@ const Footer = () => {
             </ul>
           </li>
 
-          <li class="nav__item nav__item--extra">
-            <h2 class="nav__title">
+          <li className="nav__item nav__item--extra">
+            <h2 className="nav__title">
               <b>Useful Links</b>
             </h2>
 
-            <ul class="nav__ul nav__ul--extra">
+            <ul className="nav__ul nav__ul--extra">
               <li>
                 <a href="#list-item-1">Home</a>
               </li>
@@ -92,12 +92,12 @@ const Footer = () => {
             </ul>
           </li>
 
-          <li class="nav__item">
-            <h2 class="nav__title">
+          <li className="nav__item">
+            <h2 className="nav__title">
               <b>Legal</b>
             </h2>
 
-            <ul class="nav__ul">
+            <ul className="nav__ul">
               <li>
                 <a href="/">Privacy Policy</a>
               </li>
@@ -109,13 +109,13 @@ const Footer = () => {
           </li>
         </ul>
 
-        <div class="legal">
+        <div className="legal">
           <p> Copyright &copy; 2024 Something. All rights reserved.</p>
 
-          <div class="legal__links">
+          <div className="legal__links">
             <span>
               <b>
-                Made with <span class="heart">♥</span> by{" "}
+                Made with <span className="heart">♥</span> by{" "}
                 <span style={{ color: "#8860D0" }}>Ethereal Elites</span>
               </b>
             </span>

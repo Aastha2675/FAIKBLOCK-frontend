@@ -18,7 +18,8 @@ const OnHoverScan = () => {
   );
 };
 
-const MainText = () => {
+const MainText =  () => {
+
   const navigate = useNavigate();
   const gotoScanpage = () => {
     navigate("./Scanpage");
@@ -34,12 +35,13 @@ const MainText = () => {
     setShowScan(false);
   };
 
+
   return (
     <>
       <div className="text-container" id="list-item-1">
         <h1 className="center-text">
           <span>
-            <span className="website-name-img">huwhjhwhg</span>
+            <span className="website-name-img">faikblock.</span>
             <div className="space"></div>
             Your Journey to Find
             <br />

@@ -1,6 +1,11 @@
 import "./Aboutus.css";
 
+
 const Aboutus = () => {
+ 
+  
+  
+  
   return (
     <div id="list-item-2" className="aboutus-container">
       <div className="column1">

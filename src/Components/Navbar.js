@@ -3,6 +3,7 @@ import "./Navbar.css";
 import { FcMenu } from "react-icons/fc";
 import LoginSignUp from "./LoginSignUp";
 import JoinUs from "./Joinus";
+import { ConnectKitButton } from "connectkit";
 
 const Nav = () => {
   const [othervalues, setothervalues] = useState(false);
@@ -22,11 +23,7 @@ const Nav = () => {
               id="list-example"
             >
               <ul
-                data-bs-spy="scroll"
-                data-bs-target="#list-example"
-                data-bs-smooth-scroll="true"
-                class="scrollspy-example"
-                tabindex="0"
+                
               >
                 <li>
                   <a href="#list-item-1" className="home">
@@ -47,14 +44,15 @@ const Nav = () => {
                   </a>
                 </li>
                 <li>
-                  <button
+                  <ConnectKitButton/>
+                  {/* <button
                     onClick={() => {
                       setshowlogin(true);
                     }}
                     className="login"
                   >
                     Login
-                  </button>
+                  </button> */}
                 </li>
                 <li>
                   <button

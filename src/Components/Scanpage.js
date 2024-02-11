@@ -2,6 +2,11 @@ import { Html5QrcodeScanner } from "html5-qrcode";
 import { useEffect, useRef } from "react";
 import { useState } from "react";
 import "./Scanpage.css";
+import Afterscan from "./Afterscan";
+
+
+
+
 
 const Scanpage = () => {
   const [ScanResult, setScanResult] = useState(null);
@@ -35,7 +40,13 @@ const Scanpage = () => {
   return (
     <>
       <div className="scanner-container">
-        {ScanResult ? <div>{ScanResult}</div> : <div id="reader"></div>}
+        {ScanResult ? (
+        <div>
+          <Afterscan parameter={ScanResult}/>
+        </div>
+        ) : (
+        <div id="reader"></div>
+        )}
       </div>
     </>
   );

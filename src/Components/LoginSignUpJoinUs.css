@@ -15,7 +15,7 @@
 .joinus-container{ 
     display: flex;
     width: 20rem;
-    height: 40rem;
+    height: 50rem;
     position: fixed;
     justify-content: center;
     justify-self: center;
@@ -39,7 +39,7 @@
     height: 2rem;
     position:fixed;
     z-index: 100;
-    margin-top: -35rem;
+    margin-top: -45rem;
     margin-left: 26rem;
 }
 
@@ -159,7 +159,14 @@ form{
 form h1{
     font-weight: bold;
     margin: 2rem;
+    margin-bottom: 0rem;
     font-size: 2rem;
+}
+
+form h4{
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 2rem;
+    font-size: medium;
 }
 
 input{
@@ -312,7 +319,38 @@ a{
     transform: translateX(20%);
 }
 
+.report-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+    width: 25rem;
+    height: 25rem;
+    margin-top: -25rem;
+    border: solid 0.1rem silver;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+    margin-left: 1.2rem ;
+    z-index:100;
+    position: relative;
+    background-color: black;
+    background: linear-gradient(to right, #ffffff, rgb(245, 210, 245), rgb(209, 223, 250), #dde3ff, #cad1fa, rgb(245, 210, 245), #ffffff);
+}
 
+.report-container input{
+    height: 10rem;
+    border-radius: 0rem;
+}
+
+.report-container .submit-report{
+    width: 10rem;
+    height: 3rem;
+    background:linear-gradient(to right, #8860D0 ,#5AB9EA); 
+    border-radius: 1rem;
+}
+
+.report-container label{
+    font-size: 4rem !important;
+}
 
 
  

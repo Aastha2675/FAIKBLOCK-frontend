@@ -5,16 +5,30 @@
     border: none;
     width: 25rem;
     height: 30rem;
-    margin: 4.5rem;
+    margin-top: 4.5rem;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     border: solid 0.1rem silver;
     box-shadow: rgba(0, 0, 0, 0.3) 0rem 1.9rem 3.8rem, rgba(0, 0, 0, 0.22) 0rem 1.5rem 1.2rem;
     background-color:transparent;
 }
 
-.tick-icon{
+/* display: flex;
+justify-content: center;
+align-items: center;
+border: none;
+margin-top: 4rem;
+border: solid 0.1rem silver;
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+background-color:transparent; */
+
+
+.tick-icon1{
     height: 8rem;
     width: 8rem;
-    margin-left: 8rem;
+    margin-left: 5rem;
     margin-top: -4rem;
     position: relative;
     background-image: url(./Verification-Blue-Tick.png);
@@ -22,7 +36,7 @@
     background-repeat: no-repeat;
 }
 
-.page1-container h3 {
+ h3 {
     text-align: center;
     font-family: sans-serif;
     font-size: 2rem;
@@ -39,7 +53,7 @@
     margin-bottom: 3rem;
 }
 
-.page3-container h3 {
+h3 {
     text-align: center;
     font-family: sans-serif;
     font-size: 2rem;
@@ -79,7 +93,7 @@
     border: 0.1rem solid black;
     background: linear-gradient(to right, #8860D0, #5AB9EA);
     box-shadow: rgba(0, 0, 0, 0.3) 0rem 1.9rem 3.8rem, rgba(0, 0, 0, 0.22) 0rem 1.5rem 1.2rem;
-    margin-left: 6.5rem;
+    margin-left: 3.5rem;
     margin-top: 1.5rem;
     cursor: pointer;
 }
@@ -182,19 +196,19 @@
     height: 9rem;
     width: 14rem;
     margin-top: 2rem;
-    margin-left: 6rem;
+    margin-left: 5rem;
     background-image: url(./52Z_2110.w012.n001.9B.p12.9-Photoroom.png-Photoroom.png);
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-.page3-container h3 {
+ h3 {
     margin-top: 1rem;
     margin-bottom: 0.4rem;
     z-index: 10;
 }
 
-.page3-container p {
+ p {
     justify-self: center;
     text-align: center;
     font-size: 1.3rem;
