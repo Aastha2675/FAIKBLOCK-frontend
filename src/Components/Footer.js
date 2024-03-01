@@ -19,9 +19,9 @@ const Footer = () => {
           <address>
             VJTI, Matunga-Mumbai 400019
             <br />
-            <a className="footer__btn" href="mailto:example@gmail.com">
+            {/* <a className="footer__btn" href="mailto:example@gmail.com">
               Email Us
-            </a>
+            </a> */}
           </address>
         </div>
 
@@ -83,11 +83,11 @@ const Footer = () => {
               </li>
 
               <li>
-                <a href="/">Team</a>
+                <a href="/Team">Team</a>
               </li>
 
               <li>
-                <a href="/">Contact Us</a>
+                <a href="/Team">Contact Us</a>
               </li>
             </ul>
           </li>

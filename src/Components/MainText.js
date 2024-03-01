@@ -3,6 +3,7 @@ import Marquee from "react-fast-marquee";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 
+
 const OnHoverScan = () => {
   return (
     <Marquee speed={80}>
@@ -20,6 +21,12 @@ const OnHoverScan = () => {
 
 const MainText =  () => {
 
+
+
+
+
+
+  
   const navigate = useNavigate();
   const gotoScanpage = () => {
     navigate("./Scanpage");

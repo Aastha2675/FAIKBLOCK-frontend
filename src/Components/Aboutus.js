@@ -10,6 +10,7 @@ const Aboutus = () => {
     <div id="list-item-2" className="aboutus-container">
       <div className="column1">
         <h1>About Us</h1>
+        {/* <button>clik</button> */}
         <p>
           Welcome to our platform revolutionizing product authentication through
           Smart Contracts. Our innovative system employs blockchain technology

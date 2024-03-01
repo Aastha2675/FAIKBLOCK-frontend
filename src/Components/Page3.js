@@ -14,8 +14,8 @@ const Page3 = () => {
 
   return (
     <>
-      {/* <div className="scanner-container">
-        <div className="page3-container"> */}
+      {/* <div className="scanner-container">*/}
+        <div className="page3-container"> 
           <div className="div-for-img"></div>
           <h3>
             <TiWarning className="warning-icon" />
@@ -30,8 +30,8 @@ const Page3 = () => {
             Go back!
           </p>
           
-        {/* </div>
-      </div> */}
+         </div>
+      {/*</div> */}
     </>
   );
 };

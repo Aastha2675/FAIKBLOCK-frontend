@@ -10,6 +10,7 @@ import { WagmiProvider, createConfig } from "wagmi";
 import { ConnectKitProvider, ConnectKitButton, getDefaultConfig } from "connectkit";
 import { mainnet,polygon,sepolia, optimism, arbitrum } from "wagmi/chains";
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
+import Team from "./Components/Team";
 
 
 
@@ -19,8 +20,8 @@ const chains = [mainnet,sepolia,polygon, optimism, arbitrum ];
 const config = createConfig(
   getDefaultConfig({
 
-    alchemyId:"https://sepolia.infura.io/v3/d0ecd514284f4c9fa881840f260f714a", //process.env.INFURA_ID, // or infuraId
-    walletConnectProjectId: "84ccd11920b80aa1793d7bed8af87b16",//process.env.WALLETCONNECT_PROJECT_ID,
+    alchemyId:process.env.INFURA_ID, // or infuraId
+    walletConnectProjectId:process.env.WALLETCONNECT_PROJECT_ID,
     chains,
 
     // Required
@@ -50,6 +51,7 @@ function App() {
           <Route exact path="/Scanpage" element={<Scanpage />} />
           <Route exact path="/LoginSignUp" element={<LoginSignUp />} />
           <Route exact path="/JoinUs" element={<JoinUs />} />
+          <Route exact path="/Team" element={<Team/>}/>
         </Routes>
       </BrowserRouter>
       </ConnectKitProvider>

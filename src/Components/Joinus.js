@@ -13,7 +13,7 @@ import { parseEther } from 'viem';
 
 const JoinUs = ({ onClose }) => {
   const [Productname, setProductname] = useState("");
-  const [Date, setDate] = useState("");
+  const [selectedDate, setselectedDate] = useState("");
   const [Companyname, setCompanyname] = useState("");
   const [WalletAddress, setWalletAddress] = useState("");
   const [password, setPassword] = useState("");
@@ -23,15 +23,20 @@ const JoinUs = ({ onClose }) => {
   const { writeContract } = useWriteContract()
   const account = useAccount()
   
+  const dateobject = new Date(selectedDate);
+  const timeStamp = (dateobject.getTime())/1000;    //We got the time in seconds now
   
-  
-  const interact = (productname,productcost,date,passwordd,companyname ) => {
+  const interact = (productname,productcost,timeStamps,passwordd,companyname) => {
   
     
+
     const myBigIntCost = BigInt(productcost);  
     const myNumber = Number(myBigIntCost);
     const cost = myNumber*(10**18);
     console.log(cost);
+    console.log(timeStamp);
+    
+
 
     if (!Companyname || !WalletAddress || !password) {
       alert("Please fill in all details.");
@@ -47,7 +52,7 @@ const JoinUs = ({ onClose }) => {
         productname,//Productname,
         companyname,// Companyname,
         account.address,
-        date,// Date,
+        timeStamps,// Date,
         passwordd,// password,
         cost// Productcost
       ],
@@ -64,7 +69,7 @@ const JoinUs = ({ onClose }) => {
 
     const newEntry = {
       Productname: Productname,
-      Date: Date,
+      Date: selectedDate,
       Companyname: Companyname,
       Productcost: Productcost,
       WalletAddress: WalletAddress,
@@ -76,7 +81,7 @@ const JoinUs = ({ onClose }) => {
     setTimeout( () => {
 
       setProductname("");
-      setDate("");
+      setselectedDate("");
       setCompanyname("");
       setProductcost("");
       setWalletAddress("");
@@ -108,13 +113,13 @@ const JoinUs = ({ onClose }) => {
         />
 
         <input
-          type="text"
+          type="date"
           placeholder="Enter Expiry Date "
           name="Date"
           id="Date"
           autoComplete="off"
-          value={Date}
-          onChange={(e) => setDate(e.target.value)}
+          value={selectedDate}
+          onChange={(e) => setselectedDate(e.target.value)}
           required={true}
         />
 
@@ -163,7 +168,7 @@ const JoinUs = ({ onClose }) => {
           required={true}
         />
 
-        <button className="btn" onClick={ () => interact(Productname,Productcost,Date,password,Companyname)}> Join Us</button>
+        <button className="btn" onClick={ () => interact(Productname,Productcost,timeStamp,password,Companyname)}> Join Us</button>
       </form>
     </>
   );

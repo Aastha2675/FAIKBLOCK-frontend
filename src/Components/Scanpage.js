@@ -41,7 +41,7 @@ const Scanpage = () => {
     <>
       <div className="scanner-container">
         {ScanResult ? (
-        <div>
+        <div id="reader">
           <Afterscan parameter={ScanResult}/>
         </div>
         ) : (

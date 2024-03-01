@@ -12,6 +12,7 @@ import { parseEther } from 'viem';
 
 
 const Page1 = (props) => {
+  
   const navigate = useNavigate();
   const gotohome = () => {
     navigate("/");
@@ -33,14 +34,12 @@ const Page1 = (props) => {
     };
   }, [windowdimenstions]);
 
+
+
   
   const no = BigInt(props.cost);
   const price = (Number(no))*10**(-18);
-  // cosnt price = 
-  // console.log(props.cost);
-  // console.log("Hey");
-  // console.log(price);
-
+  
 
   const { writeContract } = useWriteContract()
   const account = useAccount()
@@ -58,33 +57,35 @@ const Page1 = (props) => {
     // console.log(valueee);
     console.log(props);
 
+    if (props.status == false) {
 
-    return (writeContract({
-      abi,
-      address: contractAddress,
-      functionName: 'pay',
-      args: [
-        props.productid
-      ],
-      account:account.address,
-      chainId:sepolia.id,
-      value: BigInt(props.cost),
-    }))
+      return (writeContract({
+        abi,
+        address: contractAddress,
+        functionName: 'pay',
+        args: [
+          props.productid
+        ],
+        account:account.address,
+        chainId:sepolia.id,
+        value: BigInt(props.cost),
+      }));
+    }
+    return alert("Product is already Purchased");
 
   }
-  // console.log(props.productname);
-  // console.log(props.cost);
-  // console.log("1");
-  // console.log(1);
+ 
+
   return (
     <>
       {/* <div className="scanner-container"> */}
-        {/* <div className="page1-container"> */}
-          <ReactConfetti
+      <ReactConfetti
             width={windowdimenstions.width}
             height={windowdimenstions.height}
             tweenDuration={1000}
           />
+        <div className="page1-container">
+          
           <div className="tick-icon1"></div>
           <h3>Product is Original</h3>
           <div className="details">
@@ -97,7 +98,7 @@ const Page1 = (props) => {
               Go back!
             </p>
           </div>
-        {/* </div> */}
+        </div>
       {/* </div> */}
     </>
   );
